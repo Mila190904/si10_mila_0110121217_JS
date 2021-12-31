@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 | Kalkulator Kurs Rupiah</title>
+    <style>
+        fieldset {
+            background-color: cyan;
+        }
+    </style>
+    <script>
+        function hitung() {
+            let inp = document.getElementById("masukan").value; 
+            let drop = document.getElementById("list_uang").value;
+            let result = parseInt(inp) * parseInt(drop);
+            if (result) {
+                document.getElementById("hasil").value = result + " Rupiah";
+            }
+        }
+        
+
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table>
+            <tr>
+                <th> Masukkan Nilai</th>
+                <th>Valas</th>
+                <th>Nilai Rupiah</th>
+            </tr>
+            <tr>
+                <td><input type="number" value="" id="masukan" onchange="hitung()"></td>
+                <td>
+                    <select id="list_uang" onchange="hitung()">
+                        <option value="0"> - </option>
+                        <option value="9915">Dollar US</option>
+                        <option value="13472">Dollar Singapure</option>
+                        <option value="874">Ringgit Malaysia</option>
+                        <option value="120">Yen Jepang</option>
+                        <option value="15888">Euro</option>
+                        <option value="3592">Riyal Arab saudi</option>
+                    </select> 
+                </td>
+                <td><input type="text" value="" id="hasil" disabled ></td>
+            </tr>
+        </table>
+        <br>
+    </fieldset>
+</body>
+</html>

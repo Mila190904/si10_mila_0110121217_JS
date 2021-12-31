@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi</title>
+    <style>
+        .container {
+            font-family: cursive;
+        }
+
+        .box {
+            width: 410px;
+            margin: auto;
+            margin-top: 90px;
+            margin-left: 430px;
+            overflow: hidden;
+            padding: 20px;
+            background: rgb(28, 98, 28);
+            border-radius: 20px;
+        }
+
+        body {
+            background: rgb(252, 175, 8);
+        }
+
+        .textInput {
+            width: 400px;
+            height: 30px;
+            border: none;
+            border-radius: 2px;
+            padding-left: 8px;
+        }
+
+        span {
+            visibility: hidden;
+            color: red;
+        }
+
+        .butTon {
+            width: 410px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            padding-left: 7px;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+        Nama :  <input type="text" id="nama" class="textInput" placeholder="Masukan Nama" maxlength="30" >
+        <span>*nama tidak boleh kosong!</span>
+        <br>
+
+        Email : <input type="email" id="email" class="textInput" placeholder="Masukan Email">
+        <span>*emai tidak boleh kosong!</span>
+        <br>
+
+        Jam Keberangkatan : <input type="time" id="jam" class="textInput">
+        <span>*jam keberangkatan tidak boleh kosong!</span>
+        <br>
+
+        Tujuan Keberangkatan :  <input type="text" id="tujuan" class="textInput" placeholder="Masukan Tujuan">
+        <span>*tujuan tidak boleh kosong!</span>
+        <br>
+
+        Jumlah Tiket :  <input type="number" id="tiket" class="textInput" placeholder="Masukan Jumlah Tiket">
+        <span>*jumlah tiket tidak boleh kosong!</span>
+        <br><br>
+
+        <button class="butTon" onclick="validasi()">SUBMIT</button>
+        <div id="hasil"></div>
+        </div>
+    </div>
+
+    <script>
+        let nama = document.getElementById("nama");
+        let email = document.getElementById("email");
+        let jam = document.getElementById("jam");
+        let tujuan = document.getElementById("tujuan");
+        let tiket = document.getElementById("tiket");
+        let span = document.getElementsByTagName("span");
+        let hasil = document.getElementById("hasil");
+
+        function validasi() {
+            if (nama.value == "" || nama.value.length >= 30) {
+                 span[0].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += "Nama : " + nama.value + "<br>"
+            }
+            if (email.value == "") {
+                span[1].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += "Email : " + email.value + "<br>"
+            }
+               if (jam.value == "") {
+                span[2].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += "Jam Keberangkatan : " + jam.value + "<br>"
+            }
+            if (tujuan.value == "") {
+                span[3].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += "Tujuan Keberangkatan : " + tujuan.value + "<br>"
+            }
+            if (tiket.value == "") {
+                span[4].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += "Jumlah Tiket : " + tiket.value + "<br>"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <div class="container">
+        <select id="buah" onchange="print()">
+            <option value="Melon">Melon</option>
+            <option value="Jeruk">Jeruk</option>
+            <option value="Naga">Naga</option>
+            <option value="Strawberry">Strawberry</option>
+            <option value="Pisang">Pisang</option>
+            <option value="Mangga">Mangga</option>
+            <option value="Rambutan">Rambutan</option>
+        </select>
+        <img id="images" src="buah" alt="">
+    </div>
+
+    <script>
+        function print() {
+            const hewan = document.getElementById('buah');
+            const gambar = document.getElementById('images');
+
+            if (hewan.value === 'Melon') { 
+                gambar.src = 'https://i0.wp.com/beritatangsel.com/wp-content/uploads/2017/03/mel.jpg?fit=600%2C401&ssl=1.jpg'
+                alert('Ini gambar Melon.jpg')
+            }
+
+            else if (hewan.value === 'Jeruk') {
+                gambar.src = 'https://akcdn.detik.net.id/visual/2020/07/01/ilustrasi-jeruk-mandarin_169.jpeg?w=650'
+                alert('Ini gambar Jeruk.jpg')
+            }
+            else if (hewan.value === 'Naga') {
+                gambar.src = 'https://borneo24.b-cdn.net/wp-content/uploads/2021/01/010073100_1590046418-Manfaat-Buah-Naga-Merah-shutterstock_301936343.jpg'
+                alert('Ini gambar Naga.jpg')
+            }
+            else if (hewan.value === 'Strawberry') {
+                gambar.src = 'https://www.mooimom.id/media/id_mamapedia/hai-bumil-makan-buah-strawberry-yuk-main.jpg'
+                alert('Ini gambar Strawberry.jpg')
+            }
+            else if (hewan.value === 'Pisang') {
+                gambar.src = 'https://cdn.kibrispdr.org/data/gambar-pisang-agung-5.jpg'
+                alert('Ini gambar Pisang.jpeg')
+            }
+            else if (hewan.value === 'Mangga') {
+                gambar.src = 'https://cdn-brilio-net.akamaized.net/community/2019/03/26/17915/image_1553582820_5c99cae47a271.jpg'
+                alert('Ini gambar Mangga.jpg')
+            }
+            else if (hewan.value === 'Rambutan') {
+                gambar.src = 'https://t-2.tstatic.net/jogja/foto/bank/images/buah-rambutan.jpg'
+                alert('Ini gambar Rambutan.jpg')
+            }
+        }
+    </script>
+</body>
+</html>

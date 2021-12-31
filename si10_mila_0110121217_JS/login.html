@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            font-family: cursive;
+        }
+        body{
+            background: rgb(252, 175, 8);
+        }
+        .div1{
+            width: 320px;
+            margin: auto;
+            margin-top: 150px;
+            margin-left: 430px;
+            overflow: hidden;
+            padding: 20px;
+            background: rgb(6, 120, 6);
+            border-radius: 20px;
+        }
+        h2{
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        label{
+            color: rgb(255, 255, 255);
+            padding-left: 10px;
+        }
+        .inputText{
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 2px;
+            padding-left: 8px;
+        }
+        #logButton{
+            width: 310px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            padding-left: 7px;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(8, 240, 54);
+        }
+    </style>
+    <script src="otentikasi.js"></script>
+</head>
+<body>
+    <div class="div1">
+        <h2>Log In</h2>
+        <form name="myForm" method="post">
+            <label>Username</label>
+            <input type="text" name="Uname" class="inputText" placeholder="Username">
+            <br><br>
+            <label>Password</label>
+            <input type="password" name="Pass" class="inputText" placeholder="Password">
+            <br><br>
+            <input type="button" name="log" id="logButton" value="Log In" onclick="myFunction()">
+            <br><br>
+        </form>
+    </div>
+</body>
+</html>
